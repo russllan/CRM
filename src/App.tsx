@@ -6,7 +6,7 @@ import { useTranslation } from "react-i18next";
 
 function App() {
 
-  const { t, i18n } = useTranslation(["main"]);
+  const { t, i18n } = useTranslation();
   const changeLanguage = (language: string) => {
     i18n.changeLanguage(language);
   };
@@ -14,13 +14,14 @@ function App() {
     <>
       <BrowserRouter>
         <Routes>
-          {/* <Route path="/admin" element={<Admin />} />
-          <Route path="/driver" element={<Driver />} /> */}
+          <Route path="/admin" element={<Admin />} />
+          <Route path="/driver" element={<Driver />} />
         </Routes>
         <h1>{t("App.title")}</h1>
       <button onClick={() => changeLanguage("en")}>EN</button>
       <button onClick={() => changeLanguage("ru")}>RU</button>
       jjjj
+      ooo
       </BrowserRouter>
     </>
   );
