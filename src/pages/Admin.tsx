@@ -1,9 +1,9 @@
-import { Header } from "../components/header/Header";
+
 
 const Admin = () => {
   return (
     <div>
-      <Header />
+      admin page
     </div>
   );
 };

@@ -7,7 +7,6 @@ export const Header = () => {
     <div className="contaynerHeader">
       
       <span className="PlatinumPark">Platinum Park</span>
-      
     
       <div>
         <Button>Aрендовать</Button>
