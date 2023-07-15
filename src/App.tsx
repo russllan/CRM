@@ -1,18 +1,10 @@
 import "./App.scss";
-import { BrowserRouter, Route, Routes } from "react-router-dom";
-import Admin from "./pages/Admin";
-import Driver from "./pages/Driver";
+import useRoutes from "./hooks/useRoutes";
+
 function App() {
-  return (
-    <>
-      <BrowserRouter>
-        <Routes>
-          <Route path="/admin" element={<Admin />} />
-          <Route path="/driver" element={<Driver />} />
-        </Routes>
-      </BrowserRouter>
-    </>
-  );
+  const routes = useRoutes();
+
+  return <div>{routes}</div>;
 }
 
 export default App;
