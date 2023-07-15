@@ -10,18 +10,17 @@ function App() {
     i18n.changeLanguage(language);
   };
   return (
-    <>
+    <div className="App">
       <BrowserRouter>
+      <h1>{t("App.title")}</h1>
+        <button className="btn" onClick={() => changeLanguage("en")}>EN</button>
+        <button className="btn" onClick={() => changeLanguage("ru")}>RU</button>
         <Routes>
           <Route path="/admin" element={<Admin />} />
           <Route path="/driver" element={<Driver />} />
         </Routes>
-        <h1>{t("App.title")}</h1>
-        <button onClick={() => changeLanguage("en")}>EN</button>
-        <button onClick={() => changeLanguage("ru")}>RU</button>
-        kk
       </BrowserRouter>
-    </>
+    </div>
   );
 }
 
