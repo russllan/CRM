@@ -3,7 +3,7 @@ import { Header } from '../components/header/Header';
 
 const Driver = () => {
   return (
-    <div>
+    <div className='contayner'>
       <Header/>
     </div>
   )

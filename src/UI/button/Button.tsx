@@ -12,7 +12,6 @@ export const Button = ({ children }: ButtonProps) => {
   return (
     <button  >
       <span> {children}</span>
-
     </button>
   );
 };

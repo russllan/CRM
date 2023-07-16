@@ -3,7 +3,6 @@ import {  RouteType } from "../../constants/routes";
 // import { useSelector } from "react-redux";
 // import { AuthState } from "../../store";
 import { Route, Routes } from "react-router-dom";
-import { Header } from "../header/Header";
 import Driver from "../../pages/Driver";
 
 interface PropsTypes {
