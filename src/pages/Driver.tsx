@@ -1,9 +1,10 @@
 import React from 'react'
+import { Header } from '../components/header/Header';
 
 const Driver = () => {
   return (
-    <div>
-      Driver Page
+    <div className='contayner'>
+      <Header/>
     </div>
   )
 }
