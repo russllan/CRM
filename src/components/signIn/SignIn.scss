@@ -1,0 +1,74 @@
+.contayner {
+  position: relative;
+  h1 {
+    width: 734px;
+    height: 118px;
+    font-weight: 700;
+    font-size: 97.46px;
+    position: absolute;
+    bottom: 10px;
+    color: #ffffff;
+  }
+}
+
+.imgCar {
+  width: 100%;
+}
+.loginPage {
+  width: 400px;
+  height: 500px;
+  background-color: #ffffff;
+  position: absolute;
+  top: 90px;
+  right: 90px;
+  border-radius: 14px;
+}
+.signin {
+  width: 304px;
+  height: 38px;
+  font-weight: 600;
+  font-size: 34px;
+  line-height: 41.45px;
+  color: #000000;
+  margin-left: 35px;
+  margin-top: 35x;
+}
+form {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  width: 80%;
+  label {
+    width: (480px);
+    height: (82px);
+  }
+  input {
+    border: none;
+    outline: none;
+    border-bottom: solid 1px;
+    margin-bottom: 20px;
+  }
+  Button {
+    align-self: flex-end;
+  }
+  a {
+    align-self: flex-end;
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 14.63px;
+    color: #000000;
+  text-decoration: none;
+  margin-top: 10px;
+  }
+}
+.restore {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  margin-top: 50px;
+}
+.link-route {
+  text-decoration: none;
+  color: #1175ea;
+}
