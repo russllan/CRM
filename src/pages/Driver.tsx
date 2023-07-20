@@ -1,9 +1,10 @@
 import React from 'react'
+import MainPlatinum from '../components/Main/MainPlatinum';
 
 const Driver = () => {
   return (
     <div>
-      Driver Page
+      <MainPlatinum/>
     </div>
   )
 }
