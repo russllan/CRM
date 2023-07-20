@@ -6,7 +6,7 @@ function App() {
   const routes = useRoutes();
   return <div>{routes}
   
-  </div>;
+  </div>
 }
 
 export default App;
