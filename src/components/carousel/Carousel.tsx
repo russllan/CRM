@@ -38,6 +38,22 @@ const Carousel: React.FC<CarouselProps> = ({ res }) => {
       prevEl: ".arrow-prev",
     },
   };
+
+  const renderCarousel = useMemo(
+    () =>
+      res.map((item) => (
+        <div key={item.id}>
+          <SwiperSlide>
+            <div className={scss.wrapperImg}>
+              <img src={item.image1} alt={item.brand} />
+            </div>
+            <div>{item.brand || ""}</div>
+          </SwiperSlide>
+        </div>
+      )),
+    [res]
+  );
+
   return (
     <div className={scss.swiper}>
       <div className={`arrow-prev ${scss.myCustomClass}`}>
@@ -48,22 +64,7 @@ const Carousel: React.FC<CarouselProps> = ({ res }) => {
         />
       </div>
       <Swiper {...swiperProps}>
-        <div>
-          {useMemo(
-            () =>
-              res.map((item) => (
-                <div key={item.id}>
-                  <SwiperSlide>
-                    <div className={scss.wrapperImg}>
-                      <img src={item.image1} alt={item.brand} />
-                    </div>
-                    <div>{item.brand || ""}</div>
-                  </SwiperSlide>
-                </div>
-              )),
-            [res]
-          )}
-        </div>
+        <div>{renderCarousel}</div>
       </Swiper>
       <div className={`arrow-next ${scss.myCustomClass}`}>
         <img
