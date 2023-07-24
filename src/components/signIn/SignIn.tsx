@@ -11,7 +11,6 @@ export const SignIn = () => {
     <>
       <div className="contayner">
         <div
-          // style={{ background: `url(${signinCar})` }}
           className="loginPageContayner"
         >
           <div className="PlatinumPark">
