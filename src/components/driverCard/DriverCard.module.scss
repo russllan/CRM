@@ -1,0 +1,29 @@
+.DriverCard {
+    width: 440px;
+    .wrapper {
+        width: 90%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 15px;
+        span{
+            font-family: Montserrat;
+            font-size: 20px;
+            font-weight: 700;
+            line-height: 24px;
+            letter-spacing: 0em;
+            text-align: left;
+        }
+        .date{
+            font-family: Poppins;
+            font-size: 16px;
+            font-weight: 300;
+            line-height: 24px;
+            letter-spacing: 0em;
+            text-align: left;
+        }
+        .bell{
+            padding-left: 35px;
+        }
+    }
+}

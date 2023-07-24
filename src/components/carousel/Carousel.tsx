@@ -1,15 +1,16 @@
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination, Scrollbar, A11y } from "swiper/modules";
 import { NavigationOptions } from "swiper/types/modules/navigation";
-import { useMemo } from "react";
+import { Key, useMemo } from "react";
 
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "swiper/css/scrollbar";
-import { data } from "../../constants/carouselCard";
 
 import scss from "./Carousel.module.scss";
+import { CarouselCard } from "../../types/types";
+import { CarsType } from "../../types/index.dto";
 
 interface MySwiperProps {
   spaceBetween: number;
@@ -23,7 +24,11 @@ interface MySwiperProps {
   navigation?: NavigationOptions;
 }
 
-const Carousel: React.FC = () => {
+interface CarouselProps {
+  res: CarsType[];
+}
+
+const Carousel: React.FC<CarouselProps> = ({ res }) => {
   const swiperProps: MySwiperProps = {
     spaceBetween: 10,
     slidesPerView: 4,
@@ -46,17 +51,17 @@ const Carousel: React.FC = () => {
         <div>
           {useMemo(
             () =>
-              data.map((item) => (
+              res.map((item) => (
                 <div key={item.id}>
                   <SwiperSlide>
                     <div className={scss.wrapperImg}>
-                      <img src={item.img} alt={item.title} />
+                      <img src={item.image1} alt={item.brand} />
                     </div>
-                    <div>{item.title || ""}</div>
+                    <div>{item.brand || ""}</div>
                   </SwiperSlide>
                 </div>
               )),
-            [data]
+            [res]
           )}
         </div>
       </Swiper>

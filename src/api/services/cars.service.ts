@@ -5,7 +5,7 @@ import { http } from "../http";
 
 class CarsService {
     async getAll() {
-        const response: AxiosResponse<[CarsType]> = await http.get('cars');
+        const response: AxiosResponse<[CarsType]> = await http.get('v1/cars_list/');
         return response.data;
     }
 }
