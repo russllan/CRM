@@ -7,7 +7,6 @@ export const Restore = () => {
   return (
     <div className="contayner">
       <div
-        // style={{ backgroundImage: `url(${signinCar})` }}
         className="loginPageContayner"
       >
         <div className="PlatinumPark">
