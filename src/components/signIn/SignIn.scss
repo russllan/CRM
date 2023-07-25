@@ -43,22 +43,22 @@
     align-items: center;
     gap: 45px;
   }
-  p,span {
+  span {
     width: 80%;
+    height: 100%;
   }
   .signin {
-    width: 304px;
-    
+    width: 350px;
     font-weight: 600;
     font-size: 34px;
     line-height: 41.45px;
     color: #000000;
+    
   }
-  form {
+.forms {
     display: flex;
     flex-direction: column;
-    // width: 75%;
-
+    width: 75%;
     label {
       height: (70px);
       padding-top: 20px;
@@ -89,6 +89,7 @@
     flex-direction: row;
     align-items: center;
     justify-content: center;
+    gap: 5px;
   }
   .link-route {
     text-decoration: none;
@@ -97,30 +98,29 @@
   .forgotpassword {
     font-weight: 600;
     font-size: 34px;
-    // line-height: 41.45px;
+    line-height: 41.45px;
   }
-  input {
-    width: 300px;
-  }
+ 
 }
 .formInput{
   display: flex;
     flex-direction: column;
     width: 75%;
-
+    label {
+      height: (70px);
+      padding-top: 20px;
+    }
     input {
       border: none;
       outline: none;
       border-bottom: solid 1px;
-      &:focus {
+      &:hover {
         border-bottom: solid 1px blue;
       }
     }
-
 }
 .wrapperRestore{
   width: 450px;
-  height: 500px;
   background-color: #ffffff;
   border-radius: 14px;
   display: flex;

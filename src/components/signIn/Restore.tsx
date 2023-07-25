@@ -16,21 +16,24 @@ export const Restore = () => {
 
         <div className="loginPage">
           <div className="wrapperRestore">
-          
-              <p className="forgotpassword">Забыли пароль?</p>
-
-              <span>
+        
+          <span className="forgotpassword">Забыли пароль?</span>
+  
+      
+         <span>
                 Введите адрес электронной почты, чтобы получить ссылку для
                 восстановления пароля.
               </span>
           
 
             <div className="formInput">
-              <form className="">
+          
                 <label>email</label>
                 <input type="email" />
-              </form>
+      
             </div>
+          
+         </div>
             <div className="bottomPrt">
               <div>
                 <Button>Восстановить пароль </Button>
@@ -44,6 +47,6 @@ export const Restore = () => {
           </div>
         </div>
       </div>
-    </div>
+  
   );
 };

@@ -22,14 +22,14 @@ export const SignIn = () => {
               <p className="signin">Войти</p>
             </div>
             <div className="forms">
-              <form>
+        
                 <label htmlFor="">логин</label>
                 <input className="input" type="text" />
                 <label htmlFor="">пароль</label>
                 <input type="password" />
                 {error && <p>{error}</p>}
                 <Button> Продолжить</Button>
-              </form>
+
             </div>
             <div className="restore">
               <p>Забыли пароль?</p>{" "}
