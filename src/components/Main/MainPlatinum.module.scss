@@ -2,6 +2,8 @@
     width: 100%;
     height: 1149px;
     margin-top: 24px;
+    padding-left:9%;
+    padding-right: 9%;
     .main__inputs{
         display: flex;
         align-items: center;
@@ -9,32 +11,30 @@
         gap: 24px;
     }
     .main__submit_btn{
-      position: relative;
       display: flex;
       justify-content: end;
       margin-top: 24px;
     }
-}
-.input__bg{
-    display: flex;
-    gap: 8px;
-    border: none;
-    border-radius: 8px;
-    padding: 16px;
-    background-color: #EDEDED;
-    width: 256px;
-    input{
-        background: transparent;
+    .input__bg{
+        display: flex;
+        gap: 8px;
         border: none;
+        border-radius: 8px;
+        padding: 16px;
+        background-color: #EDEDED;
+        width: 256px;
+        input{
+            background: transparent;
+            border: none;
+        }
     }
-}
-.bg{
-    display: flex;
+    .bg{
+        display: flex;
+    }
+ 
 }
 .swiper{
-    width: 1080px;
-    display: flex;
-    align-items: center;
+    margin-top: 40px;
     .wrapperImg {
         width: 100%;
         padding-bottom: 5px;
@@ -42,11 +42,5 @@
             width: 95%;
         }
     }
-    .arrow {
-        width: 17px;
-    }
-   .myCustomClass {
-    cursor: pointer;
-    padding: 0px 30px;
-   }
 }
+
