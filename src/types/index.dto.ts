@@ -1,0 +1,20 @@
+export interface CarsType {
+    id?: number,
+    brand: string,
+    model: string,
+    license_plate: string,
+    vehicle_type: string,
+    image1?: string,
+    image2?: string,
+    image3?: string,
+    image4?: string,
+    image5?: string,
+    image6?: string,
+    passport_image?: string,
+    year_production: number,
+    color: string,
+    last_checking: string,
+    price_by_day: string,
+    is_busy: boolean,
+    top: boolean
+}
