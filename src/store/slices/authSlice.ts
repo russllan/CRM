@@ -15,7 +15,7 @@ const role = localStorage.getItem("role");
 const initialState: RootState = {
   value: 0,
   isAuth: true,
-  data: {
+  data: {  
     email: "driver@gmail.com",
     role: role || 'driver',
     token: ""
