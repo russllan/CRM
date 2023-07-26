@@ -6,7 +6,7 @@ import { Link} from "react-router-dom"
 import "../signIn/SignIn.scss"
 
 export const SignIn = () => {
-const [error,setError]=useState('')
+const [error, setError]=useState('')
 
   return (
     <div className="contayner">
@@ -21,11 +21,9 @@ const [error,setError]=useState('')
           <input type="password" />
           {error && <p>{error}</p>}
           <Button> Продолжить</Button>
-       
         </form>
-
         <div className="restore">
-          <p>Забыли пароль?</p>{" "}
+          <p>Забыли пароль?</p>
           <Link className="link-route" to="/restore">
             Восстановить
           </Link>

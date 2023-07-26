@@ -2,7 +2,7 @@ import React, { ReactNode } from "react";
 import { useSelector } from "react-redux";
 import { RootState } from "../store";
 import Page from "../components/pages/DriverPage";
-import { AdminRoutes, DriverRoutes } from "../constants/routes";
+import { AdminRoutes, DriverRoutes, UserRoutes } from "../constants/routes";
 
 const useRoutes = (): ReactNode => {
   const { data } = useSelector((state: RootState) => state.auth);
@@ -12,6 +12,9 @@ const useRoutes = (): ReactNode => {
   if (role) {
     if (role === "driver") return <Page routes={DriverRoutes} />;
     if (role === "shipper") return <Page routes={AdminRoutes} />;
+    else {
+      return <Page routes={UserRoutes} />;
+    }
   }
 };
 
