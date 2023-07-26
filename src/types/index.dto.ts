@@ -1,4 +1,5 @@
 export interface CarsType {
+    [x: string]: any;
     id?: number,
     brand: string,
     model: string,

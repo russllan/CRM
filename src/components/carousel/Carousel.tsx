@@ -40,11 +40,11 @@ const Carousel: React.FC<CarouselProps> = ({ res }) => {
 
   const renderCarousel = useMemo(
     () =>
-      res?.map((item) => (
+      res?.map((item, index) => (
         <div className={scss.wrSlide} key={item.id}>
           <SwiperSlide>
             <div className={scss.wrapperImg}>
-              <img src={item.image1 || "/images/car.svg"} alt={item.brand} />
+              <img src={`${item[`image${index + 1}`] || "/images/car.svg"}`} alt={item.brand} className={scss.img} />
             </div>
             <div>{item.brand || ""}</div>
           </SwiperSlide>
