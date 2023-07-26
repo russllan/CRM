@@ -29,8 +29,8 @@ interface CarouselProps {
 
 const Carousel: React.FC<CarouselProps> = ({ res }) => {
   const swiperProps: MySwiperProps = {
-    spaceBetween: 10,
-    slidesPerView: res.length,
+    spaceBetween: 50,
+    slidesPerView: 3,
     modules: [Navigation, Pagination, Scrollbar, A11y],
     navigation: {
       nextEl: ".arrow-next",
@@ -40,11 +40,15 @@ const Carousel: React.FC<CarouselProps> = ({ res }) => {
 
   const renderCarousel = useMemo(
     () =>
-      res?.map((item, index) => (
+      res?.map((item) => (
         <div className={scss.wrSlide} key={item.id}>
           <SwiperSlide>
             <div className={scss.wrapperImg}>
-              <img src={`${item[`image${index + 1}`] || "/images/car.svg"}`} alt={item.brand} className={scss.img} />
+              <img
+                src={item.image1 || "/images/car.svg"}
+                alt={item.brand}
+                className={scss.img}
+              />
             </div>
             <div>{item.brand || ""}</div>
           </SwiperSlide>
@@ -62,9 +66,7 @@ const Carousel: React.FC<CarouselProps> = ({ res }) => {
           alt="Arrow left"
         />
       </div>
-      <Swiper {...swiperProps}>
-        {renderCarousel}
-      </Swiper>
+      <Swiper {...swiperProps}>{renderCarousel}</Swiper>
       <div className={`arrow-next ${scss.myCustomClass}`}>
         <img
           className={scss.arrow}

@@ -13,7 +13,7 @@ const DriverCard: React.FC<PropsType> = ({ img, name, date }) => {
         <div>
           <img className={scss.img} src={img === "" ? "/images/smallCar.svg" : img} alt={name} />
         </div>
-        <div>
+        <div className={scss.text}>
           <span>{name}</span> <br />
           <span className={scss.date}>{date}</span>
         </div>
