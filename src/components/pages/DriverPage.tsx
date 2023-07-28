@@ -5,8 +5,10 @@ import { RouteType } from "../../constants/routes";
 import { Route, Routes } from "react-router-dom";
 import Driver from "../../pages/Driver";
 import { SignIn } from "../signIn/SignIn";
+
 import { Restore } from "../signIn/Restore";
 import Admin from "../../pages/Admin";
+
 
 interface PropsTypes {
   routes: RouteType[];
@@ -23,10 +25,13 @@ const DriverPage: React.FC<PropsTypes> = ({ routes }) => {
     <div>
       <Routes>
         {routes.map(renderComponent)}
-        <Route path="/driver" element={<Driver />} />
+        <Route path="/driver" element={<Driver />}
         <Route path="signin" element={<SignIn />} />
         <Route path="restore" element={<Restore />} />
         <Route path="/admin" element={<Admin />} />
+
+        <Route path="/signIn" element={<SignIn />} />
+
       </Routes>
     </div>
   );
