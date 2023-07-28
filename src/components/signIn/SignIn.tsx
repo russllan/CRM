@@ -16,7 +16,6 @@ export const SignIn = () => {
           <div className="PlatinumPark">
             <h1>Platinum Park</h1>
           </div>
-
           <div className="loginPage">
             <div>
               <p className="signin">Войти</p>
