@@ -1,6 +1,7 @@
 
-import './Button.module.scss'
+import scss from './Button.module.scss'
 import React from "react";
+
 
 interface ButtonProps {
   children: React.ReactNode;
@@ -10,7 +11,7 @@ interface ButtonProps {
 export const Button = ({ children }: ButtonProps) => {
   
   return (
-    <button  >
+    <button className={scss.genericButton} >
       <span> {children}</span>
     </button>
   );

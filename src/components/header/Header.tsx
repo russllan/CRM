@@ -7,9 +7,11 @@ export const Header = () => {
     <div className="contaynerHeader">
       <span className="PlatinumPark">Platinum Park</span>
       <div>
-        <Button>Aрендовать</Button>
+        <Button>Главная</Button>
+        <Button>Каталог</Button>
         <Button >Контакты</Button>
         <Button>Войти</Button>
+
       </div>
     </div>
     <hr />
