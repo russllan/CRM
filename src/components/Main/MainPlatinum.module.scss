@@ -1,19 +1,19 @@
 .main__platinum{
     width: 100%;
     height: 1149px;
-    margin-top: 24px;
-    padding-left:9%;
-    padding-right: 9%;
+    padding-top: 24px;
     .main__inputs{
         display: flex;
+        justify-content: space-around;
         align-items: center;
-        justify-content: center;
         gap: 24px;
+        width: 88%;
     }
     .main__submit_btn{
       display: flex;
       justify-content: end;
       margin-top: 24px;
+      width: 88%;
     }
     .input__bg{
         display: flex;
@@ -22,25 +22,25 @@
         border-radius: 8px;
         padding: 16px;
         background-color: #EDEDED;
-        width: 256px;
+        width: 20%;
         input{
             background: transparent;
             border: none;
         }
     }
-    .bg{
-        display: flex;
-    }
- 
-}
-.swiper{
+ .selector{
+    display: flex;
+    align-items: center;
+    background-color: transparent;
+    border: none;
+ }
+ .swiper{
+    display: flex;
+    justify-content: space-between;
     margin-top: 40px;
-    .wrapperImg {
-        width: 100%;
-        padding-bottom: 5px;
-        img{
-            width: 95%;
-        }
-    }
+
+ }
 }
+
+
 

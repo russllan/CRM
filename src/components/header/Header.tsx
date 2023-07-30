@@ -11,7 +11,6 @@ export const Header = () => {
           <Button button="button">Войти</Button>
         </div>
       </div>
-      <hr className="line" />
     </>
   );
 };
