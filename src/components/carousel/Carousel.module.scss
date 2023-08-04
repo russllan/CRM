@@ -8,6 +8,12 @@
         img{
             width: 95%;
         }
+        .img{
+            width: 267px;
+            height: 263px;
+            border-radius: 14px;
+            border: 1px;
+        }
     }
     .arrow {
         width: 17px;
@@ -16,4 +22,8 @@
     cursor: pointer;
     padding: 0px 30px;
    }
+
 }
+.wrSlide{
+    width: 1080px;
+   }

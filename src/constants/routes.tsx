@@ -1,3 +1,4 @@
+import { SignIn } from "../components/signIn/SignIn";
 import Admin from "../pages/Admin";
 import Driver from "../pages/Driver";
 
@@ -20,5 +21,13 @@ export const DriverRoutes: RouteType[] = [
         title: 'DriverPage',
         path: '/driver',
         Page: Driver
+    }
+];
+
+export const UserRoutes: RouteType[] = [
+    {
+        title: 'auth',
+        path: '/signIn',
+        Page: SignIn
     }
 ];

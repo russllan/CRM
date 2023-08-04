@@ -3,9 +3,7 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "swiper/css/scrollbar";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation, Pagination, Scrollbar, A11y } from "swiper/modules";
-import { NavigationOptions } from "swiper/types/modules/navigation";
-import { ScrollbarOptions } from "swiper/types/modules/scrollbar";
+import { Pagination, A11y } from "swiper/modules";
 import { useMemo } from "react";
 import styles from "./MainPlatinum.module.scss";
 import { MainBtnArr, RenderSelectionArr, SliderArr } from "../../constants/main";
@@ -55,7 +53,7 @@ const MainPlatinum: React.FC = () => {
       )),
     [MainBtnArr]
   );
-  const Sliderd = useMemo(
+  const SliderInfo = useMemo(
     () =>
       SliderArr.map((item, index) => (
         <SwiperSlide>
@@ -82,19 +80,19 @@ const MainPlatinum: React.FC = () => {
   );
   return (
     <section className={styles.main__platinum}>
-      <div className="container">
-          <div className={styles.swiper}>
+          <div className={styles.main__swiper}>
             <Swiper {...swiperProps}>
-              <div>{Sliderd}</div>
+              <div>{SliderInfo}</div>
             </Swiper>
           </div>
+          <div className={styles.form}>
           <div className={styles.main__inputs}>
           {renderSelection}
           {renderInt}
         </div>
+        </div>
         <div className={styles.main__submit_btn}>
           <Button  title="Отправить"  />
-        </div>
         </div>
     </section>
   );
