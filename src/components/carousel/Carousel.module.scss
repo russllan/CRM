@@ -1,29 +1,12 @@
-.swiper{
-    width: 1080px;
-    display: flex;
-    align-items: center;
-    .wrapperImg {
-        width: 100%;
-        padding-bottom: 5px;
-        img{
-            width: 95%;
-        }
-        .img{
-            width: 267px;
-            height: 263px;
-            border-radius: 14px;
-            border: 1px;
-        }
-    }
-    .arrow {
-        width: 17px;
-    }
-   .myCustomClass {
+.swiper {
+  width: 1310px;
+  display: flex;
+  align-items: center;
+  .arrow {
+    width: 17px;
+  }
+  .myCustomClass {
     cursor: pointer;
     padding: 0px 30px;
-   }
-
+  }
 }
-.wrSlide{
-    width: 1080px;
-   }

@@ -19,3 +19,8 @@ export interface CarsType {
     is_busy: boolean,
     top: boolean
 }
+
+export interface AuthType {
+    username: string,
+    password: string
+}

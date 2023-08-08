@@ -5,3 +5,22 @@
   $font: Inter;
   $fontTwo: Montserrat;
 }
+
+.btnPrimary {
+  width: fit-content;
+  padding: 12px 24px 12px 24px;
+  border-radius: 228px;
+  background: #000000;
+  color: #FFFFFF;
+  font-family: Poppins;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 21px;
+  letter-spacing: 0em;
+  text-align: left;
+  cursor: pointer;
+  &:hover {
+    background: #2f2f2f;
+    color: #ffffffe0;
+  }
+}

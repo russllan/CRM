@@ -3,13 +3,14 @@ import { Navigation, Pagination, Scrollbar, A11y } from "swiper/modules";
 import { NavigationOptions } from "swiper/types/modules/navigation";
 import { useMemo } from "react";
 
-import "swiper/css";
-import "swiper/css/navigation";
-import "swiper/css/pagination";
-import "swiper/css/scrollbar";
+  import "swiper/css";
+  import "swiper/css/navigation";
+  import "swiper/css/pagination";
+  import "swiper/css/scrollbar";
 
 import scss from "./Carousel.module.scss";
 import { CarsType } from "../../types/index.dto";
+import CarCard from "../carCard/CarCard";
 
 interface MySwiperProps {
   spaceBetween: number;
@@ -29,7 +30,7 @@ interface CarouselProps {
 
 const Carousel: React.FC<CarouselProps> = ({ res }) => {
   const swiperProps: MySwiperProps = {
-    spaceBetween: 50,
+    spaceBetween: 35,
     slidesPerView: 3,
     modules: [Navigation, Pagination, Scrollbar, A11y],
     navigation: {
@@ -40,17 +41,16 @@ const Carousel: React.FC<CarouselProps> = ({ res }) => {
 
   const renderCarousel = useMemo(
     () =>
-      res?.map((item) => (
+      res?.filter((item) => !item.is_busy).map((item) => (
         <div className={scss.wrSlide} key={item.id}>
           <SwiperSlide>
-            <div className={scss.wrapperImg}>
-              <img
-                src={item.image1 || "/images/car.svg"}
-                alt={item.brand}
-                className={scss.img}
-              />
-            </div>
-            <div>{item.brand || ""}</div>
+            <CarCard
+              brand={item.brand}
+              img={item.image1}
+              model={item.model}
+              price={item.price_by_day}
+              id={item.id}
+            />
           </SwiperSlide>
         </div>
       )),

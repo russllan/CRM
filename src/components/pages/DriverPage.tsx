@@ -3,8 +3,11 @@ import { RouteType } from "../../constants/routes";
 // import { useSelector } from "react-redux";
 // import { AuthState } from "../../store";
 import { Route, Routes } from "react-router-dom";
-import Driver from "../../pages/Driver";
+import Driver from "../../pages/driver/Driver";
 import { SignIn } from "../signIn/SignIn";
+import { Restore } from "../signIn/Restore";
+import DetailsPage from "../../pages/details/DetailsPage";
+import CatalogPage from "../../pages/catalog/CatalogPage";
 
 interface PropsTypes {
   routes: RouteType[];
@@ -23,6 +26,9 @@ const DriverPage: React.FC<PropsTypes> = ({ routes }) => {
         {routes.map(renderComponent)}
         <Route path="/driver" element={<Driver />} />
         <Route path="/signIn" element={<SignIn />} />
+        <Route path="/restore" element={<Restore />} />
+        <Route path="/details/:id" element={<DetailsPage />} />
+        <Route path="/catalog" element={<CatalogPage />} />
       </Routes>
     </div>
   );

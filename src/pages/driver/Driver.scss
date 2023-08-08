@@ -1,0 +1,42 @@
+.container {
+  width: 100%;
+  font-family: "Montserrat", sans-serif;
+  color: #1d1d1d;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  .allCars {
+    font-family: Poppins;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 24px;
+    letter-spacing: 0em;
+    text-align: left;
+    span {
+      border-bottom: 1px solid #000000;
+      cursor: pointer;
+    }
+  }
+  .carousel {
+    width: 1080px;
+  }
+  .driverCard {
+    width: 80%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+  }
+  div {
+    .span {
+      //styleName: poppins/bold;
+      font-family: Poppins;
+      font-size: 40px;
+      font-weight: 700;
+      line-height: 60px;
+      letter-spacing: 0em;
+      text-align: left;
+      color: #000000;
+    }
+  }
+}

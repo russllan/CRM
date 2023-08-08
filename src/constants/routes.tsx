@@ -1,6 +1,6 @@
 import { SignIn } from "../components/signIn/SignIn";
-import Admin from "../pages/Admin";
-import Driver from "../pages/Driver";
+import Admin from "../pages/admin/Admin";
+import Driver from "../pages/driver/Driver";
 
 export interface RouteType {
     title: string,
