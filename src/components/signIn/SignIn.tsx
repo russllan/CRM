@@ -5,7 +5,8 @@ import { Link } from "react-router-dom";
 import "../signIn/SignIn.scss";
 
 export const SignIn = () => {
-  const [error, setError] = useState("");
+ const [error,setError]=useState(true)
+
 
   return (
     <>
@@ -21,14 +22,14 @@ export const SignIn = () => {
               <p className="signin">Войти</p>
             </div>
             <div className="forms">
-        
+  
                 <label htmlFor="">логин</label>
-                <input className="input" type="text" />
-                <label htmlFor="">пароль</label>
-                <input type="password" />
-                {error && <p>{error}</p>}
-                <Button> Продолжить</Button>
+                <input  className={error ? 'inputError' : "input"} type="text" />
 
+                <label htmlFor="">пароль</label>
+                <input className={error ? 'inputError' : "input"} type="password" />
+                
+                <Button> Продолжить</Button>
             </div>
             <div className="restore">
               <p>Забыли пароль?</p>{" "}

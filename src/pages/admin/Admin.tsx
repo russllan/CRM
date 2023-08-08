@@ -1,9 +1,11 @@
+import { AdminHeader } from "../../components/adminHeader/AdminHeader";
 
 
 const Admin = () => {
   return (
     <div>
-      admin page
+      <AdminHeader/>
+
     </div>
   );
 };
