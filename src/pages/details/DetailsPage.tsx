@@ -6,7 +6,6 @@ import { AppDispatch, RootState } from "../../store";
 import { getCar } from "../../store/slices/carsSlice";
 
 import scss from "./Details.module.scss";
-import DetailCarousel from "../../components/detailCarousel/DetailCarousel";
 
 interface ParamsType {
   id: number;
@@ -26,7 +25,6 @@ const DetailsPage: React.FC = () => {
   console.log(result);
 
   return <div className={scss.Details}>
-    <DetailCarousel />
   </div>;
 };
 
