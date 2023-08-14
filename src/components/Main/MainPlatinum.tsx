@@ -28,15 +28,17 @@ const MainPlatinum: React.FC = () => {
   useEffect(() => {
     dispatch(getCars());
     console.log("rendering!!!");
-    console.log(result);
   }, []);
+  console.log(result);
   const swiperProps: MySwiperProps = {
     spaceBetween: 10,
     slidesPerView: 1,
     modules: [Pagination,  A11y],
     pagination: { 
+      paginationDisabledClass: "swiper-pagination-bullet",
       clickable: true,
     },
+    
   };
   const renderInt = useMemo(
     () =>
@@ -66,17 +68,17 @@ const MainPlatinum: React.FC = () => {
   );
   const renderSelection = useMemo(
     () =>
-    RenderSelectionArr.map((item, index) => (
+      RenderSelectionArr.map((item, index) => (
         <div className={styles.input__bg} key={`${item}_${index}`}>
           <img src={item.img} alt="work__icons" />
           <select className={styles.selector} name="select__btn" id="selection" placeholder={item.text}>
-            <option value="0">Выберите Машину</option>
-            <option value="0" >woeoqjnf</option>
+            {result.map((item) => (
+              <option key={item.brand}>{item.brand}</option>
+            ))}
           </select>
-       
         </div>
       )),
-    [MainBtnArr]
+    [MainBtnArr, result]
   );
   return (
     <section className={styles.main__platinum}>
@@ -92,7 +94,7 @@ const MainPlatinum: React.FC = () => {
         </div>
         </div>
         <div className={styles.main__submit_btn}>
-          <Button  title="Отправить"  />
+          <Button   title="Отправить"  />
         </div>
     </section>
   );

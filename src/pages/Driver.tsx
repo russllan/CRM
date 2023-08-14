@@ -10,6 +10,8 @@ import { getCars } from "../store/slices/carsSlice";
 import { AppDispatch, RootState } from "../store";
 import "bootstrap/dist/css/bootstrap.min.css"
 import { CarsType } from "../types/index.dto";
+import CustomSideBar from "../components/side-bar/SideBar";
+
 const Driver = () => {
   const dispatch: AppDispatch = useDispatch();
   const { result } = useSelector((state: RootState) => state.cars.cars);

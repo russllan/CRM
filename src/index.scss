@@ -28,5 +28,21 @@ code {
   cursor: pointer;
 }
 .swiper-pagination-bullet{
-  color: red;
+  background-color: white !important;
+  width: 16px !important;
+  height: 16px !important;
+  :root{
+    background-color: gold !important;
+  }
+  ::before{
+    background-color: aqua;
+  }
+}
+.swiper-pagination-bullet-active{
+  background-color: gold !important;
+
+}
+.swiper-pagination-bullet-no-active{
+  background-color: gold !important;
+
 }

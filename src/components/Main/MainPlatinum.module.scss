@@ -1,25 +1,26 @@
 .main__platinum{
     width: 100%;
     height: 1149px;
-    padding-top: 24px;
+    padding-top: 68px;
     .main__inputs{
         display: flex;
-        justify-content: space-around;
-        align-items: center;
+        width: max-content;
         gap: 24px;
     }
     .main__submit_btn{
       display: flex;
       justify-content: end;
       margin-top: 24px;
-      width: 85%;
+      width: 84.5%;
     }
     .input__bg{
         display: flex;
+        justify-content: center;
+        align-items: center;
+        padding:  12px 25px 12px 25px;
         gap: 8px;
         border: none;
         border-radius: 8px;
-        padding: 16px;
         background-color: #EDEDED;
         input{
             background: transparent;
@@ -42,7 +43,6 @@
     flex-direction: column;
     align-items: center;
     margin-top: 40px;
-    
  }
 }
 
