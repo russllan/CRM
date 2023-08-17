@@ -67,7 +67,7 @@ const MainPlatinum: React.FC = () => {
           </div>
         </div>
       )),
-    [SliderArr]
+    [mainCard]
   );
   return (
     <section className={styles.main__platinum}>

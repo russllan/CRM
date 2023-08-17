@@ -40,7 +40,7 @@ const SelectionForm: React.FC<PropsType> = ({ }) =>  {
               
             </div>
           )),
-        [MainBtnArr, result]
+        [RenderSelectionArr, result]
       );
   return (
     <form className={styles.form}>
