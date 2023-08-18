@@ -1,17 +1,32 @@
-.genericButton {
-  background-color: #fff ;
-  border-radius: 14px;
-  padding: 12px, 20px;
+button {
+    background-color: #fff;
   color: #000000;
-  font-size: 16px;
-  border: none;
-  width: 140px;
-  height: 44px;
+  &:hover {
   transition: width 0.3s ease, height 0.3s ease, background-color 0.3s ease; 
   &:hover{
     background-color: #000000;
     color: #fff;
   }
- 
- 
+}
+.genericButton {
+  background-color: #fff ;
+  border-radius: 14px;
+  padding: 12px, 20px;
+  font-size: 16px;
+  border: none;
+  width: 140px;
+  height: 44px;
+  transition: 500ms ease-out;
+}
+// .button {
+
+// .btn {
+//   background-color: #000000;
+//   color: #fff;
+//   &:hover {
+//     background-color: #fff;
+//     color: black;
+//   }
+// }
+// }
 }

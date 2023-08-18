@@ -10,7 +10,39 @@ body {
   box-sizing: border-box;
 }
 
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+
+.container {
+  width: 55%;
+  margin: 0 auto;
+}
+.button {
+  cursor: pointer;
+}
+.swiper-pagination-bullet{
+  background-color: white !important;
+  width: 16px !important;
+  height: 16px !important;
+  :root{
+    background-color: gold !important;
+  }
+  ::before{
+    background-color: aqua;
+  }
+}
+.swiper-pagination-bullet-active{
+  background-color: gold !important;
+
+}
+.swiper-pagination-bullet-no-active{
+  background-color: gold !important;
+
 }

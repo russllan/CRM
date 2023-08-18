@@ -1,14 +1,6 @@
 .container {
-  width: 100%;
+  width: 74%;
+  margin: 0 auto;
   font-family: "Montserrat", sans-serif;
   color: #1d1d1d;
-  .carousel {
-    width: 1080px;
-  }
-  .driverCard {
-    width: 80%;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-  }
 }

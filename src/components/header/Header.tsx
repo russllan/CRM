@@ -1,6 +1,5 @@
 import { Button } from "../../UI/button/Button";
 import "./Header.scss";
-
 export const Header = () => {
   return (
    <>
@@ -11,11 +10,8 @@ export const Header = () => {
         <Button>Каталог</Button>
         <Button >Контакты</Button>
         <Button>Войти</Button>
-
       </div>
-    </div>
-    <hr />
+      </div>
     </>
-
   );
 };

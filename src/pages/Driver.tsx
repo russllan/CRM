@@ -1,15 +1,16 @@
+import MainPlatinum from "../components/Main/MainPlatinum";
 import { Header } from "../components/header/Header";
 import Carousel from "../components/carousel/Carousel";
 import DriverCard from "../components/driverCard/DriverCard";
 import AboutProject from "../components/aboutProject/AboutProject";
-
 import "./Driver.scss";
-
 import { useDispatch, useSelector } from "react-redux";
 import { useEffect, useMemo } from "react";
 import { getCars } from "../store/slices/carsSlice";
 import { AppDispatch, RootState } from "../store";
+import "bootstrap/dist/css/bootstrap.min.css"
 import { CarsType } from "../types/index.dto";
+import CustomSideBar from "../components/side-bar/SideBar";
 
 const Driver = () => {
   const dispatch: AppDispatch = useDispatch();
@@ -46,16 +47,13 @@ const Driver = () => {
   );
 
   return (
-    <div className="container">
-      <Header />
-      <div className="carousel">
-        <Carousel res={result} />
-      </div>
-      <div className="driverCard">{renderDriverCard}</div>
-      <div>
-        <AboutProject />
-      </div>
+ <>
+   <Header/>
+   <hr/>
+   <div className="container">
+   <MainPlatinum/>
     </div>
+    </>
   );
 };
 

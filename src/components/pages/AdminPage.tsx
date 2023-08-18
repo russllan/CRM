@@ -17,7 +17,7 @@ const AdminPage: React.FC<PropsTypes> = ({ routes }) => {
   );
 
   return (
-    <div >
+    <div>
       <Routes>
         {routes.map(renderComponent)}
         <Route path="/admin" element={<Admin />} />
@@ -26,4 +26,4 @@ const AdminPage: React.FC<PropsTypes> = ({ routes }) => {
   );
 };
 
-export default AdminPage ;
+export default AdminPage;
