@@ -1,19 +1,18 @@
-import { Header } from "../../components/header/Header";
-import Carousel from "../../components/carousel/Carousel";
 import RentCard from "../../components/rentCard/RentCard";
+import MainPlatinum from "../../components/Main/MainPlatinum";
+import Header from "../../components/header/Header";
+import Carousel from "../../components/carousel/Carousel";
 import AboutProject from "../../components/aboutProject/AboutProject";
-
 import "./Driver.scss";
-
 import { useDispatch, useSelector } from "react-redux";
 import { useEffect, useMemo, useState } from "react";
 import { getCars } from "../../store/slices/carsSlice";
 import { AppDispatch, RootState } from "../../store";
-import { CarsType } from "../../types/index.dto";
 import { useNavigate } from "react-router-dom";
+import "bootstrap/dist/css/bootstrap.min.css";
+import { CarsType } from "../../types/index.dto";
 
 const Driver = () => {
-  const [isCars, setCars] = useState<boolean>(false);
   const navigate = useNavigate();
   const dispatch: AppDispatch = useDispatch();
   const { result } = useSelector((state: RootState) => state.cars.cars);
@@ -50,19 +49,32 @@ const Driver = () => {
   );
 
   return (
-    <div className="container">
+    <>
       <Header />
-      <div><span className="span">Список доступных машин для аренды</span></div>
-      <div className="carousel">
-        <Carousel res={result} />
+      <div className="container">
+        <div className="mainPlatinum">
+          <MainPlatinum />
+        </div>
+        <div className="containerWrapp">
+          <div className="carousel">
+            <div className="titles"><span className="span">Список доступных машин для аренды</span></div>
+            <Carousel res={result} />
+          </div>
+          <div className="allCars">
+            <div className="titles"><span onClick={() => navigate("/catalog")}>Все машины</span></div>
+          </div>
+          <div className="titles">
+            <span className="span">Последние Аренды:</span>
+          </div>
+          <div className="driverCard">
+            {renderRentCard}
+            </div>
+          <div className="aboutProject">
+            <AboutProject />
+          </div>
+        </div>
       </div>
-      <div className="allCars"><span onClick={() => navigate("/catalog")}>Все машины</span></div>
-      <div><span className="span">Последние Аренды:</span></div>
-      <div className="driverCard">{renderRentCard}</div>
-      <div>
-        <AboutProject />
-      </div>
-    </div>
+    </>
   );
 };
 

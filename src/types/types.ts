@@ -1,3 +1,6 @@
+export interface MainCard{
+     img:string
+    }
 export interface CarouselCard {
   id: number;
   img: string;
@@ -7,5 +10,9 @@ export interface CarouselCard {
 }
 
 export interface ModalDataType {
+  title: string
+}
+
+export interface HeadersType {
   title: string
 }

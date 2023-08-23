@@ -1,7 +1,7 @@
 import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import scss from "./CatalogPage.module.scss";
-import { Header } from "../../components/header/Header";
+import Header from "../../components/header/Header";
 import { AppDispatch, RootState } from "../../store";
 import { getCars } from "../../store/slices/carsSlice";
 import { CarsType } from "../../types/index.dto";

@@ -15,7 +15,10 @@ const CarCard: React.FC<PropsType> = ({ img, brand, model, price, id }) => {
       <Link to={`/details/${id}`}>
         <div className={scss.wrapperImg}>
           <img
-            src={img || "/images/car.svg"}
+            src={
+              img ||
+              "https://images.unsplash.com/photo-1503376780353-7e6692767b70?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OXx8Y2FyfGVufDB8fDB8fHww&auto=format&fit=crop&w=500&q=60"
+            }
             alt={brand}
             className={scss.img}
           />
