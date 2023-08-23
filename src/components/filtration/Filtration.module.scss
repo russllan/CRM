@@ -1,5 +1,8 @@
 .Filtration {
   width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   .catalogFilter {
     padding-top: 36px;
     padding-bottom: 24px;
@@ -35,8 +38,8 @@
     }
   }
   .allCars {
-    width: 100%;
-    padding-top: 64px;
+    width: 70%;
+    padding-top: 60px;
     display: flex;
     flex-wrap: wrap;
     align-items: center;

@@ -23,7 +23,7 @@ const CarCard: React.FC<PropsType> = ({ img, brand, model, price, id }) => {
       </Link>
       <div className={scss.title}>
         <div className={scss.brand}>
-          <span>{"FORD MUSTAN "}</span> <br />
+          <span>{brand}</span> <br />
           {model}
         </div>
         <div className={scss.price}>

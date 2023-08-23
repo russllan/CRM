@@ -1,21 +1,21 @@
 import { useState, FC, useMemo } from "react";
 
-import { CarouselCard, ModalDataType } from "../../types/types";
+import { CarouselCard } from "../../types/types";
 
 import { ModalData } from "../../constants/modalData";
 import Modal from "../modal/Modal";
 
 import scss from "./Filtration.module.scss";
 import CarCard from "../carCard/CarCard";
-import { transform } from "typescript";
+import { CarsType } from "../../types/index.dto";
 
 interface PropsType {
-  data: CarouselCard[];
+  data: CarsType[];
 }
 
 const Filtration: FC<PropsType> = ({ data }) => {
   const [isActive, setActive] = useState<boolean>(false);
-  const [newData, setData] = useState<CarouselCard[]>(data);
+  const [newData, setData] = useState<CarsType[]>(data);
   const [inputValue, setInputValue] = useState<string[]>([]);
 
   const renderModalTitle = useMemo(
@@ -50,10 +50,10 @@ const Filtration: FC<PropsType> = ({ data }) => {
     () =>
       newData?.map((item) => (
         <CarCard
-          img={item.img}
-          brand={item.title}
-          model={item.mark}
-          price={item.price}
+          img={item.image1}
+          brand={item.brand}
+          model={item.model}
+          price={item.price_by_day}
           id={item.id}
         />
       )),
@@ -61,25 +61,25 @@ const Filtration: FC<PropsType> = ({ data }) => {
   );
 
   const sortByMark = (checkbox: string[]) => {
-    const filteredData = data.filter((item) => checkbox.includes(item.mark));
+    const filteredData = data.filter((item) => checkbox.includes(item.model));
     const sortedData = [...filteredData].sort((a, b) =>
-      a.mark.localeCompare(b.mark)
+      a.model.localeCompare(b.model)
     );
     sortedData.length === 0 ? setData(data) : setData(sortedData);
   };
 
   const sortByName = () => {
-    const sortedData = [...data].sort((a, b) => a.title.localeCompare(b.title));
+    const sortedData = [...data].sort((a, b) => a.brand.localeCompare(b.brand));
     setData(sortedData);
   };
 
   const sortByAscendingPrice = () => {
-    const sortedData = [...data].sort((a, b) => a.price - b.price);
+    const sortedData = [...data].sort((a, b) => Number(a.price_by_day) - Number(b.price_by_day));
     setData(sortedData);
   };
 
   const sortByDescendingPrice = () => {
-    const sortedData = [...data].sort((a, b) => b.price - a.price);
+    const sortedData = [...data].sort((a, b) => Number(b.price_by_day) - Number(a.price_by_day));
     setData(sortedData);
   };
 
@@ -91,7 +91,7 @@ const Filtration: FC<PropsType> = ({ data }) => {
       </div>
       <div>
         <button className={`btnPrimary`} onClick={() => setActive(!isActive)}>
-          По марке{" "}
+          По марке
           <img
             className={isActive ? scss.arrowImgTrue : scss.arrowImg}
             src="/images/arrow-down.svg"

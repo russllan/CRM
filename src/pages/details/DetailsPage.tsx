@@ -16,8 +16,6 @@ const DetailsPage: React.FC = () => {
   const dispatch: AppDispatch = useDispatch();
   const { result } = useSelector((state: RootState) => state.cars.car);
 
- 
-  
   useEffect(() => {
     dispatch(getCar(id));
   }, []);

@@ -4,7 +4,7 @@ import { RouteType } from "../../constants/routes";
 // import { AuthState } from "../../store";
 import { Route, Routes } from "react-router-dom";
 import Driver from "../../pages/driver/Driver";
-import { SignIn } from "../signIn/SignIn";
+import SignIn from "../signIn/SignIn";
 import { Restore } from "../signIn/Restore";
 import DetailsPage from "../../pages/details/DetailsPage";
 import CatalogPage from "../../pages/catalog/CatalogPage";

@@ -24,3 +24,7 @@ export interface AuthType {
     username: string,
     password: string
 }
+
+export interface RefreshToken {
+    refresh: string | null;
+}

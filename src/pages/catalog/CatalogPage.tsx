@@ -10,12 +10,11 @@ import Filtration from "../../components/filtration/Filtration";
 
 const CatalogPage: React.FC = () => {
   const dispatch: AppDispatch = useDispatch();
-    const { result } = useSelector((state: RootState) => state.cars.cars);
-    console.log(result);
+  const { result } = useSelector((state: RootState) => state.cars.cars);
 
-    useEffect(() => {
-      dispatch(getCars());
-    }, []);
+  useEffect(() => {
+    dispatch(getCars());
+  }, []);
 
   return (
     <div className={scss.CatalogPage}>
@@ -23,7 +22,7 @@ const CatalogPage: React.FC = () => {
         <Header />
       </div>
       <div>
-        <Filtration data={data}/>
+        <Filtration data={result} />
       </div>
     </div>
   );

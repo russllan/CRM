@@ -1,4 +1,4 @@
-import { SignIn } from "../components/signIn/SignIn";
+import SignIn from "../components/signIn/SignIn";
 import Admin from "../pages/admin/Admin";
 import Driver from "../pages/driver/Driver";
 

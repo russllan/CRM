@@ -1,35 +1,59 @@
-import { createSlice, PayloadAction } from '@reduxjs/toolkit';
+import { createAsyncThunk, createSlice, PayloadAction } from "@reduxjs/toolkit";
+import Api from "../../api/Api";
+import { AuthType, RefreshToken } from "../../types/index.dto";
+import { SliceDataType } from "../types";
+
+export const postAuth = createAsyncThunk("auth", async (userData: AuthType) => {
+  const response = await Api.auth.postAuth(userData);
+  return response;
+});
+
+export const refreshAuth = createAsyncThunk("refresh", async (data: RefreshToken) => {
+  const response = await Api.auth.refreshToken(data);
+  return response;
+});
 
 interface RootState {
-  value: number;
-  isAuth: boolean,
-  data: null | {
-    email?: string;
-    role: string;
-    token?: string; 
-  };
-  error: null;
-};
+  isAuth: boolean;
+  user: SliceDataType<AuthType[]>;
+  error: boolean;
+  role: string;
+  token: string;
+  isLoading: boolean;
+}
 
 const role = localStorage.getItem("role");
 const initialState: RootState = {
-  value: 0,
-  isAuth: true,
-  data: {  
-    email: "driver@gmail.com",
-    role: role || 'driver',
-    token: ""
+  isAuth: false,
+  user: {
+    result: [],
   },
-  error: null
+  role: "driver",
+  token: "",
+  error: false,
+  isLoading: false
 };
 
 const authSlice = createSlice({
   name: "root",
   initialState,
-  reducers: {
-    setRole: (state: RootState, action: PayloadAction<string>) => {
-      state.data = { ...state.data, role: action.payload };
-    }
+  reducers: {},
+  extraReducers: (builder) => {
+    builder.addCase(postAuth.fulfilled, (state, action) => {
+      state.isAuth = true;
+      state.isLoading = false;
+      state.error = false;
+      state.user.result = action.payload;
+      localStorage.setItem("token", JSON.stringify(state.user.result));
+    });
+    builder.addCase(postAuth.pending, (state) => {
+      state.isLoading = true;
+    });
+    builder.addCase(postAuth.rejected, (state) => {
+      state.isLoading = false;
+      state.isAuth = false;
+      state.error = true;
+    });
   },
 });
 
