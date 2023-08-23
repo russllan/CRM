@@ -5,13 +5,13 @@ import Page from "../components/pages/DriverPage";
 import { AdminRoutes, DriverRoutes, UserRoutes } from "../constants/routes";
 
 const useRoutes = (): ReactNode => {
-  const { data } = useSelector((state: RootState) => state.auth);
-  const role = data?.role; // 'driver' | 'shipper'
+  const { role } = useSelector((state: RootState) => state.auth);
+  const roleData = role; // 'driver' | 'shipper'
 
   // if(!isAuth) return <Page routes={notAuthRoutes} />;
-  if (role) {
-    if (role === "driver") return <Page routes={DriverRoutes} />;
-    if (role === "shipper") return <Page routes={AdminRoutes} />;
+  if (roleData) {
+    if (roleData === "driver") return <Page routes={DriverRoutes} />;
+    if (roleData === "shipper") return <Page routes={AdminRoutes} />;
     else {
       return <Page routes={UserRoutes} />;
     }

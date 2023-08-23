@@ -8,12 +8,21 @@ import Api from "../../api/Api";
     return response;
  });
 
+ export const getCar = createAsyncThunk('car', async (id: number) => {
+    const response = await Api.cars.get(id);
+    return response;
+ });
+
 interface StateType {
     cars: SliceDataType<CarsType[]>;
+    car: SliceDataType<CarsType[]>;
 }
 
 const initialState: StateType = {
     cars: {
+        result: []
+    },
+    car: {
         result: []
     }
 }
@@ -26,6 +35,9 @@ const initialState: StateType = {
         builder.addCase(getCars.fulfilled, (state, action) => {
             state.cars.result = action.payload;
         });
+        builder.addCase(getCar.fulfilled, (state, action) => {
+            state.car.result = action.payload;
+        })
     }
  })
 

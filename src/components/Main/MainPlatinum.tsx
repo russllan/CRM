@@ -30,7 +30,6 @@ const MainPlatinum: React.FC = () => {
   const { result } = useSelector((state: RootState) => state.cars.cars);
   useEffect(() => {
     dispatch(getCars());
-    console.log("rendering!!!");
   }, []);
   console.log(result);
   const swiperProps: MySwiperProps = {
@@ -55,7 +54,7 @@ const MainPlatinum: React.FC = () => {
   );
   const RenderCardsInfo = useMemo(
     () =>
-      mainCard.map((item, index) => (
+      mainCard.map((item) => (
         <div className={styles.info__card}>
           <div className={styles.card__img}>
             <img src={item.img} alt="" />

@@ -1,4 +1,4 @@
-import scss from "./DriverCard.module.scss";
+import scss from "./RentCard.module.scss";
 
 interface PropsType {
   img?: string,

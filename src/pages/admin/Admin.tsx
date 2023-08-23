@@ -1,4 +1,4 @@
-import { AdminHeader } from "../components/adminHeader/AdminHeader";
+import { AdminHeader } from "../../components/adminHeader/AdminHeader";
 
 
 const Admin = () => {

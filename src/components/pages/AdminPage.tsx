@@ -3,7 +3,7 @@ import { RouteType } from "../../constants/routes";
 // import { useSelector } from "react-redux";
 // import { AuthState } from "../../store";
 import { Route, Routes } from "react-router-dom";
-import Admin from "../../pages/Admin";
+import Admin from "../../pages/admin/Admin";
 
 interface PropsTypes {
   routes: RouteType[];

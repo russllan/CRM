@@ -1,0 +1,57 @@
+.Filtration {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  .catalogFilter {
+    padding-top: 36px;
+    padding-bottom: 24px;
+  }
+  button {
+    margin-right: 8px;
+  }
+  .wrapperModal {
+    padding-top: 8px;
+    position: absolute;
+    top: auto;
+    left: 59vh;
+    .modal {
+      display: flex;
+      gap: 12px;
+      .checkbox {
+        width: 15px;
+        height: 15px;
+        background: rgba( 104, 55, 202, 0.1) !important;
+        border: 1px solid #ffffff;
+        vertical-align: middle;
+      }
+      span {
+        font-family: Poppins;
+        font-size: 14px;
+        font-weight: 600;
+        line-height: 21px;
+        letter-spacing: 0em;
+        text-align: left;
+        color: #ffffff;
+        padding-bottom: 8px;
+      }
+    }
+  }
+  .allCars {
+    width: 70%;
+    padding-top: 60px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 24px;
+  }
+  .arrowImg {
+    padding-left: 12px;
+    vertical-align: middle;
+  }
+  .arrowImgTrue {
+    transform: rotate(180deg);
+    padding-right: 12px;
+  }
+}
