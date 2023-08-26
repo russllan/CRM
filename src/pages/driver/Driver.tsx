@@ -11,6 +11,7 @@ import { AppDispatch, RootState } from "../../store";
 import { useNavigate } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { CarsType } from "../../types/index.dto";
+import { Footer } from "../../components/footer/Footer";
 
 const Driver = () => {
   const navigate = useNavigate();
@@ -72,8 +73,12 @@ const Driver = () => {
           <div className="aboutProject">
             <AboutProject />
           </div>
+
         </div>
+
       </div>
+      <Footer/>
+
     </>
   );
 };

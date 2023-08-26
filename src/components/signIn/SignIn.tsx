@@ -47,7 +47,7 @@ const SignIn: FC = () => {
 
   return (
     <>
-      <div className="container">
+      <div className="contayner">
         <div className="loginPageContayner">
           <div className="PlatinumPark">
             <h1>Platinum Park</h1>
