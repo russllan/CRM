@@ -35,7 +35,6 @@ export const Footer: FC = () => {
           <span className={scss.span}>Социальные сети</span>
           <br />
           <br />
-          <div>
             <div>
               {footerImg.map((image, index) => (
                 <a
@@ -46,7 +45,6 @@ export const Footer: FC = () => {
                 </a>
               ))}
             </div>
-          </div>
         </div>
       </div>
 

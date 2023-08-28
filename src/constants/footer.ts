@@ -12,7 +12,7 @@ export const footerImg: footerIcons[] = [
  },
  {
    img: whatsapp,
-   to: "https://www.instagram.com/"
+   to: "https://www.whatsapp.com/"
  },
  {
    img: vk,
@@ -21,6 +21,6 @@ export const footerImg: footerIcons[] = [
  },
  {
   img: facebook,
-  to: "https://www.whatsapp.com/"
+  to: "https://www.facebook.com/"
 },
 ]
