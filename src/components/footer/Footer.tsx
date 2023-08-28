@@ -1,12 +1,10 @@
-import { Link } from "react-router-dom";
-import facebook from "../../assets/icons/facebook.png";
-import insta from "../../assets/icons/insta.png";
-import vk from "../../assets/icons/vk.png";
-import whatsapp from "../../assets/icons/whatsapp.png";
+
 import scss from "./footer.module.scss";
 import { FC } from "react";
+import { footerImg } from "../../constants/footer";
 
-export const Footer:FC = () => {
+export const Footer: FC = () => {
+
   return (
     <div className={scss.contayner}>
       <div className={scss.wrapper}>
@@ -28,7 +26,7 @@ export const Footer:FC = () => {
             <br /> Почта:{" "}
             <span className={scss.underline}>platiumpark@gmail.com</span>
             <br />
-            Адрес: Кыргызстан,Бишкек{" "} <br />
+            Адрес: Кыргызстан,Бишкек <br />
             <span className={scss.underline}> Правила пользование сайта </span>
           </p>
         </div>
@@ -38,19 +36,16 @@ export const Footer:FC = () => {
           <br />
           <br />
           <div>
-            <Link to="https://www.facebook.com/">
-              <img src={facebook} alt="facebook" />
-            </Link>
-
-            <Link to="https://www.instagram.com/">
-              <img src={insta} alt="insta" />
-            </Link>
-            <Link to="https://www.vk.com/">
-              <img src={vk} alt="vk" />
-            </Link>
-            <Link to="https://www.whatsapp.com/">
-              <img src={whatsapp} alt="whatsapp" />
-            </Link>
+            <div>
+              {footerImg.map((image, index) => (
+                <a
+                  key={index}
+                  href={image.to}
+                >
+                  <img src={image.img} alt={`Image ${index}`} />
+                </a>
+              ))}
+            </div>
           </div>
         </div>
       </div>
