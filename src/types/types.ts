@@ -16,3 +16,8 @@ export interface ModalDataType {
 export interface HeadersType {
   title: string
 }
+
+export interface footerIcons{
+  img:string
+  to: string
+ }

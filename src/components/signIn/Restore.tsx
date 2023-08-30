@@ -35,7 +35,7 @@ export const Restore = () => {
          </div>
             <div className="bottomPrt">
               <div>
-                <Button>Восстановить пароль </Button>
+                <Button >Восстановить пароль </Button>
               </div>
               <div>
                 <Link className="restoreAuth" to="/">
