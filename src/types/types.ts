@@ -21,3 +21,7 @@ export interface footerIcons{
   img:string
   to: string
  }
+ export interface AdminHeadersType {
+  title: string;
+  route: string;
+}

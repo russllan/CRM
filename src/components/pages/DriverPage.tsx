@@ -5,7 +5,6 @@ import { RouteType } from "../../constants/routes";
 import { Route, Routes } from "react-router-dom";
 import Driver from "../../pages/driver/Driver";
 import SignIn from "../signIn/SignIn";
-import { Restore } from "../signIn/Restore";
 import DetailsPage from "../../pages/details/DetailsPage";
 import CatalogPage from "../../pages/catalog/CatalogPage";
 import Admin from "../../pages/admin/Admin";
@@ -27,7 +26,6 @@ const DriverPage: React.FC<PropsTypes> = ({ routes }) => {
         {routes.map(renderComponent)}
         <Route path="/driver" element={<Driver />} />
         <Route path="signin" element={<SignIn />} />
-        <Route path="restore" element={<Restore />} />
         <Route path="/admin" element={<Admin />} />
         <Route path="/signIn" element={<SignIn />} />
         <Route path="/details/:id" element={<DetailsPage />} />

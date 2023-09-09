@@ -5,7 +5,7 @@ import Carousel from "../../components/carousel/Carousel";
 import AboutProject from "../../components/aboutProject/AboutProject";
 import "./Driver.scss";
 import { useDispatch, useSelector } from "react-redux";
-import { useEffect, useMemo, useState } from "react";
+import { useEffect, useMemo } from "react";
 import { getCars } from "../../store/slices/carsSlice";
 import { AppDispatch, RootState } from "../../store";
 import { useNavigate } from "react-router-dom";
