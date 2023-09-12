@@ -1,5 +1,4 @@
 import { useState, FC, useEffect } from "react";
-import { Link } from "react-router-dom";
 import scss from "./SignIn.module.scss";
 import { useDispatch, useSelector } from "react-redux";
 import { AppDispatch, RootState } from "../../store";
@@ -73,7 +72,9 @@ const SignIn: FC = () => {
               </div>
               {Error ? (
                 <div className={scss.inputWrapper}>
-                  <label className={scss.errorLabel} htmlFor="">логин</label>
+                  <label className={scss.errorLabel} htmlFor="">
+                  Неправильный пароль или логин
+                  </label>
                   <input
                     className={scss.inputError}
                   
@@ -92,8 +93,8 @@ const SignIn: FC = () => {
                   }
                 />
               </div>
-
-              <label htmlFor="">Забыли пароль?</label>
+              
+              <p >Забыли пароль?</p>
               <button className={scss.signInBtn} onClick={sending}>
                 {" "}
                 Войти{" "}

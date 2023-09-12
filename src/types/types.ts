@@ -25,3 +25,11 @@ export interface footerIcons{
   title: string;
   route: string;
 }
+
+// 
+export interface DataBaseCard {
+  icon: string
+  text: string
+  sum: number
+  strategy: string
+}

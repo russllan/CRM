@@ -1,0 +1,79 @@
+.skeleton{
+}
+
+.contayner {
+  width: 80%;
+  margin: 0 auto;
+  padding: 50px;
+  nav {
+    display: flex;
+    justify-content: space-between;
+    width: 60%;
+  }
+}
+.addCAr {
+  width: 197px;
+  height: 45px;
+  border: 1px solid #1577ea;
+  border-radius: 10px;
+  padding: 12px, 24px, 12px, 24px;
+  color: #1577ea;
+  background-color: #fff;
+}
+.desktopWrapper {
+  display: flex;
+  justify-content: space-between;
+  width: 80%;
+  margin: 0 auto;
+  align-items: center;
+  padding: 50px;
+}
+//dataBase
+.cardWrap {
+  display: flex;
+  justify-content: space-around;
+  // background-color: #1577ea;
+}
+
+.card {
+  list-style: none;
+  text-align: center;
+  padding: 50px;
+  .sum {
+    font-weight: 400;
+    font-size: 28px;
+  }
+}
+
+nav button {
+  padding-bottom: 12px;
+  text-decoration: none;
+  font-size: 18px;
+  color: #1d1d1d;
+  border: none;
+  background-color: #ffffff;
+
+  &:hover {
+    border-bottom: solid 2px #1d1d1d;
+  }
+}
+.selectWrapp {
+  display: flex;
+  width: 40%;
+  gap: 12px;
+  padding-top: 42px;
+  align-items: center;
+
+  .selectMy {
+    width: 217px;
+    height: 48px;
+    border-radius: 20px;
+    padding: 12px, 24px;
+  }
+  option {
+    color: #333;
+    padding: 12px, 24px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+  }
+}

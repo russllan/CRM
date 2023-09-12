@@ -16,7 +16,6 @@
   background-image: url("../../assets//images//loginCar.png");
   // background-position: center;
   background-size: cover;
-
 }
 
 .PlatinumPark {
@@ -25,10 +24,8 @@
   flex-direction: column;
   padding: 50px;
   height: 39px;
-  // font-weight: 700;
-  // font-size: 32px;
- 
-  .welcome{
+
+  .welcome {
     font-weight: 600;
     font-size: 64px;
     color: rgb(39, 38, 38);
@@ -37,7 +34,6 @@
     font-weight: 600;
     font-size: 64px;
     color: black;
-    
   }
 }
 .loginPage {
@@ -74,7 +70,7 @@
     flex-direction: column;
     width: 80%;
     gap: 40px;
-   
+
     .inputWrapper {
       display: flex;
       flex-direction: column;
@@ -90,26 +86,18 @@
     .inputError {
       border: none;
       outline: none;
-      border-bottom: solid 1px;
-      &:focus {
-        border-bottom: solid 1px rgb(255, 30, 0);
-      }
+      border: 1px solid red;
     }
-    .errorLabel{
+    .errorLabel {
       color: red;
-      &:focus {
-        border-bottom: solid 1px rgb(255, 30, 0);
-      }
     }
-    .signInBtn{
-      border-radius:8px ;
-      background-color: #1577EA;
+    .signInBtn {
+      border-radius: 8px;
+      background-color: #1577ea;
       height: 69px;
       color: white;
       cursor: pointer;
       border: none;
     }
- 
   }
-
 }

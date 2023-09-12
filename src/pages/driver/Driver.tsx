@@ -58,27 +58,26 @@ const Driver = () => {
         </div>
         <div className="containerWrapp">
           <div className="carousel">
-            <div className="titles"><span className="span">Список доступных машин для аренды</span></div>
+            <div className="titles">
+              <span className="span">Список доступных машин для аренды</span>
+            </div>
             <Carousel res={result} />
           </div>
           <div className="allCars">
-            <div className="titles"><span onClick={() => navigate("/catalog")}>Все машины</span></div>
+            <div className="titles">
+              <span onClick={() => navigate("/catalog")}>Все машины</span>
+            </div>
           </div>
           <div className="titles">
             <span className="span">Последние Аренды:</span>
           </div>
-          <div className="driverCard">
-            {renderRentCard}
-            </div>
+          <div className="driverCard">{renderRentCard}</div>
           <div className="aboutProject">
             <AboutProject />
           </div>
-
         </div>
-
       </div>
-      <Footer/>
-
+      <Footer />
     </>
   );
 };
