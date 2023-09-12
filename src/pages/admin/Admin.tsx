@@ -9,9 +9,7 @@ const Admin = () => {
     <div>
       <AdminHeader />
       <SkeletonPage />
-      <AddCar/>
       <Footer />
-      <AddCar />
       
       {/* <Routes> */}
 
