@@ -1,4 +1,4 @@
-import { AdminHeader } from "../adminHeader/AdminHeader";
+import { AdminHeader } from "../../adminComponents/adminHeader/AdminHeader";
 import styles from "../addCar/AddCar.module.scss";
 import userimg from "../../assets/icons/user.svg";
 import { useState } from "react";
