@@ -6,6 +6,7 @@ import { useSelector } from 'react-redux';
 import { MainBtnArr, RenderSelectionArr } from '../constants/main';
 import { useMemo } from 'react';
 import Button from '../button/Button';
+
 interface PropsType{
 }
 const SelectionForm: React.FC<PropsType> = ({ }) =>  {

@@ -8,6 +8,8 @@ import SignIn from "../signIn/SignIn";
 import DetailsPage from "../../pages/details/DetailsPage";
 import CatalogPage from "../../pages/catalog/CatalogPage";
 import Admin from "../../pages/admin/Admin";
+import { AddCar } from "../../adminComponents/addCar/AddCar";
+import { AddDriver } from "../../adminComponents/addDriver/AddDriver";
 
 interface PropsTypes {
   routes: RouteType[];
@@ -30,6 +32,10 @@ const DriverPage: React.FC<PropsTypes> = ({ routes }) => {
         <Route path="/signIn" element={<SignIn />} />
         <Route path="/details/:id" element={<DetailsPage />} />
         <Route path="/catalog" element={<CatalogPage />} />
+        <Route path="addCar" element={<AddCar />} />
+        <Route path="addDriver" element={<AddDriver />} />
+
+
       </Routes>
     </div>
   );
