@@ -4,8 +4,6 @@ import scss from "./CatalogPage.module.scss";
 import Header from "../../components/header/Header";
 import { AppDispatch, RootState } from "../../store";
 import { getCars } from "../../store/slices/carsSlice";
-import { CarsType } from "../../types/index.dto";
-import { data } from "../../constants/carouselCard";
 import Filtration from "../../components/filtration/Filtration";
 
 const CatalogPage: React.FC = () => {

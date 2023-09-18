@@ -21,3 +21,15 @@ export interface footerIcons{
   img:string
   to: string
  }
+ export interface AdminHeadersType {
+  title: string;
+  route: string;
+}
+
+// 
+export interface DataBaseCard {
+  icon: string
+  text: string
+  sum: number
+  strategy: string
+}
