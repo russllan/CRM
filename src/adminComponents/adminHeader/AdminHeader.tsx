@@ -1,8 +1,9 @@
+
 import { Link } from "react-router-dom";
 import search from "../../assets/icons/searchh.svg";
-import scss from "./admin.module.scss";
+import scss from './AdminHeader.module.scss'
 import { useMemo } from "react";
-import { data } from "../../constants/adminHeader";
+import { data } from '../../constants/adminHeader';
 
 export const AdminHeader = () => {
   const renderTitle = useMemo(
@@ -20,14 +21,18 @@ export const AdminHeader = () => {
         <Link to={"/"} className={scss.platinumPark}>
           Platinum Park
         </Link>
+
         <div className={scss.wrapper}>
+          {/* <Link to="/addCar"> <button  className={scss.addCAr}>Добавить Автомобиль</button></Link>
+          <Link to="/addDriver"> <button  className={scss.addCAr}>Добавить Водителя</button></Link> */}
           {renderTitle}
           <div>
-            <img src={search} alt="search" />
+          <img src={search} alt="search" />
+
           </div>
+
         </div>
       </header>
-      <hr />
     </>
   );
 };

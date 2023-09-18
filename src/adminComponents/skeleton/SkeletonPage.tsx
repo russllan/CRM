@@ -12,7 +12,7 @@ const SkeletonPage = () => {
 
   const [showCarInput, setShowCarInput] = useState(false);
   const [currentPage, setCurrentPage] = useState("База данных");
-  const [showButtons, setShowButtons] = useState(true); 
+  const [showButtons, setShowButtons] = useState(true);
 
   const handlePageChange = (page: string) => {
     setCurrentPage(page);
@@ -31,7 +31,7 @@ const SkeletonPage = () => {
   };
 
   return (
-    < div className={scss.skeleton}>
+    <div className={scss.skeleton}>
       <div className={scss.desktopWrapper}>
         <div>
           <p>Административная панель</p>
@@ -39,24 +39,21 @@ const SkeletonPage = () => {
         </div>
         {/* {showCarInput ? <input className={scss.inputSearch} type="text" /> : null} */}
 
-
         {showButtons && (
           <div>
-            <Link to ='addCar' className={scss.addCAr}>
-              Добавить Автомобиль
-            </Link>{" "}
-            <button
-              onClick={() => navigate("/addDriver")}
-              className={scss.addCAr}
-            >
+            <button onClick={() => navigate("/addCar")} className={scss.addCAr}>
+              Добавить Машин
+            </button>
+            <button onClick={() => navigate("/addDriver")} className={scss.addCAr}>
               Добавить Водителя
             </button>
           </div>
+          
         )}
       </div>
       <div className={scss.contayner}>
         <nav>
-          <button  onClick={() => handleDataBase("База данных")}>
+          <button onClick={() => handleDataBase("База данных")}>
             База данных
           </button>
           <button onClick={() => handleDriverItems("Список водителей")}>

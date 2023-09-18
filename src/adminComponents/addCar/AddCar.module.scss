@@ -1,0 +1,68 @@
+form{
+ display: flex;
+ flex-direction: column;
+ width: 80%;
+ margin: 0 auto;
+ padding: 50px;
+ gap: 50px;
+}
+.addBtn{
+ 
+}
+.first div{
+ display: flex;
+ flex-direction: column;
+ gap: 16px;
+
+}
+.first div input{
+ display: flex;
+ flex-direction: column;
+ width: 432px;
+ height: 48px;
+ border-radius: 10px;
+ border: 1px solid #D7D8D9;
+ outline: none;
+padding: 5px;
+}
+
+.second div{
+ display: flex;
+ flex-direction: column;
+ gap: 16px;
+}
+
+.second div input{
+ display: flex;
+ flex-direction: column;
+ width: 432px;
+ height: 48px;
+ border-radius: 10px;
+border: 1px solid #D7D8D9;
+outline: none;
+padding: 5px;
+
+}
+.wrapper{
+ display: flex;
+ justify-content: space-between;
+}
+label{
+ font-size: 16px;
+ font-weight: 600;
+}
+
+.first{
+ display: flex;
+ flex-direction: column;
+ gap: 20px;
+}
+.second{
+ display: flex;
+ flex-direction: column;
+ gap: 20px;
+}
+.userBtn{
+ border: none;
+ border-radius: 100%;
+}
